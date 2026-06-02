@@ -1,0 +1,25 @@
+<textarea id="question" placeholder="Paste your homework question here..."></textarea>
+<br>
+<button onclick="askAI()">Get Help</button>
+
+<div id="answer"></div>
+
+<script>
+  async function askAI() {
+    const question = document.getElementById("question").value;
+    const answerBox = document.getElementById("answer");
+
+    answerBox.innerHTML = "thinking...";
+
+    const response = await fetch("/api/homework", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ question })
+    });
+
+    const data = await response.json();
+    answerBox.innerHTML = data.answer || "Something went wrong.";
+  }
+</script>
