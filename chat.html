@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ally AI Chat</title>
+</head>
+
+<body style="
+background: linear-gradient(to bottom, #ffb6d9, #ffffff);
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 50px;
+min-height: 100vh;
+">
+
+  <h1 style="font-size: 48px;">
+    💬 Ally AI Chat 💬
+  </h1>
+
+  <p>chat about anything here!</p>
+
+  <textarea
+    id="question"
+    placeholder="say something..."
+    style="
+      width: 80%;
+      height: 150px;
+      border-radius: 20px;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+    "
+  ></textarea>
+
+  <br><br>
+
+  <button
+    onclick="showResponse()"
+    style="
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+    "
+  >
+    send ✨
+  </button>
+
+  <p id="response" style="margin-top: 25px; font-size: 18px;"></p>
+
+  <br>
+
+  <a href="index.html">🏠 home</a>
+
+  <script>
+    function showResponse() {
+      document.getElementById("response").innerText =
+        "Ally AI is still being built but your message was received! 💗";
+    }
+  </script>
+
+</body>
+</html>
