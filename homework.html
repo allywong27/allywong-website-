@@ -8,15 +8,24 @@
   <h1>Homework Help</h1>
   <p>type your homework question below</p>
 
-  <textarea placeholder="type your question here..." style="width: 80%; height: 150px; border-radius: 15px; padding: 15px;"></textarea>
+  <textarea id="question" placeholder="type your question here..." style="width: 80%; height: 150px; border-radius: 15px; padding: 15px;"></textarea>
   <br><br>
 
-  <button style="padding: 12px 25px; border-radius: 20px; border: none;">
+  <button onclick="showResponse()" style="padding: 12px 25px; border-radius: 20px; border: none;">
     ask ai
   </button>
 
-  <br><br>
+  <p id="response" style="margin-top: 25px; font-size: 18px;"></p>
+
+  <br>
   <a href="school.html">back to school helper</a>
+
+  <script>
+    function showResponse() {
+      document.getElementById("response").innerText =
+        "AI response coming soon! For now, your question has been received.";
+    }
+  </script>
 
 </body>
 </html>
